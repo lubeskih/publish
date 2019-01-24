@@ -1,0 +1,31 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  width: 50px;
+  height: 50px;
+}
+
+.preview p {
+  margin-bottom: 0;
+  font-family: "Ubuntu Mono";
+  color: grey;
+  font-size: 16px;
+}
+
+h3 {
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.preview {
+  background-color: #f2f2f2;
+  border-radius: 7px;
+  padding: 1rem;
+}
+
+.preview-col button {
+  width: 100%;
+  margin-top: 1rem;
+}
