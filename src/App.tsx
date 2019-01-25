@@ -70,14 +70,15 @@ class App extends Component<any, State> {
         </div>
         <hr />
         <div className="row">
-          <div className="col-6 mt-3">
+          <div className="col-7 mt-3">
             <Form>
               <FormGroup tag="fieldset">
+                <Label className="label-text">Сакам да објавам: </Label>
                 <FormGroup check>
                   <Label inline>
                     <Input value="option1" onChange={this.handleOptionChange} checked={this.state.selectedOption === 'option1'} type="radio" name="radio1" />{' '}
                     Блог пост
-                </Label>
+                  </Label>
                 </FormGroup>
                 <FormGroup check>
                   <Label inline>
@@ -88,26 +89,26 @@ class App extends Component<any, State> {
               </FormGroup>
 
               <FormGroup>
-                <Label for="exampleEmail">Наслов</Label>
-                <Input onChange={this.handleInputChange} type="text" name="title" id="titleField" placeholder="Мојот живот во Винтерфел" />
+                <Label className="label-text" for="exampleEmail">Наслов</Label>
+                <Input onChange={this.handleInputChange} type="text" name="title" id="titleField" placeholder="Учиме да лемиме!" />
               </FormGroup>
               <FormGroup>
-                <Label for="exampleEmail">Објавил</Label>
-                <Input onChange={this.handleInputChange} type="text" name="author" id="authorField" placeholder="Џон Сноу" />
+                <Label className="label-text" for="exampleEmail">Објавил</Label>
+                <Input onChange={this.handleInputChange} type="text" name="author" id="authorField" placeholder="Некојси" />
               </FormGroup>
               <FormGroup>
-                <Label for="exampleEmail">Лепенки</Label>
-                <Input onChange={this.handleInputChange} type="text" name="tags" id="tagsField" placeholder="ладно винтерфел снег живот" disabled={!isDisabled} />
+                <Label className="label-text" for="exampleEmail">Лепенки</Label>
+                <Input onChange={this.handleInputChange} type="text" name="tags" id="tagsField" placeholder="electronics soldering" disabled={!isDisabled} />
               </FormGroup>
               <FormGroup>
-                <Label for="exampleEmail" >Категорија</Label>
-                <Input onChange={this.handleInputChange} type="text" name="category" id="categoryField" placeholder="живот" disabled={!isDisabled} />
+                <Label className="label-text" for="exampleEmail" >Категорија</Label>
+                <Input onChange={this.handleInputChange} type="text" name="category" id="categoryField" placeholder="electronics" disabled={!isDisabled} />
               </FormGroup>
 
               <div className="row">
                 <div className="col-6">
                   <FormGroup>
-                    <Label>Почеток на настанот: </Label>
+                    <Label className="label-text">Почеток на настанот: </Label>
                     <DatePicker
                       selected={this.state.startDate}
                       onChange={this.handleStartDateChange}
@@ -122,7 +123,7 @@ class App extends Component<any, State> {
                 </div>
                 <div className="col-6">
                   <FormGroup>
-                    <Label>Крај на настанот:</Label>
+                    <Label className="label-text">Крај на настанот:</Label>
                     <DatePicker
                       selected={this.state.endDate}
                       onChange={this.handleEndDateChange}
@@ -140,7 +141,7 @@ class App extends Component<any, State> {
             </Form>
 
           </div>
-          <div className="col-6 preview-col">
+          <div className="col-5 preview-col">
             <div className="preview">
               <p>---</p>
               {isDisabled ? <p id="type">layout: blog_post </p> : <p id="type">layout: event_post </p>}
@@ -167,7 +168,7 @@ class App extends Component<any, State> {
             </div>
             <div className="infoPanel">
               <hr />
-              info panel
+              <p>Built with ♥ for the <a href="http://blog.spodeli.org">#skopjehacklab</a> by <a href="https://lh.mk">lh.mk</a></p>
             </div>
           </div>
         </div>
