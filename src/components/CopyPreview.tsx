@@ -1,7 +1,6 @@
 // Libraries
 import React, { Component } from "react";
 import { Button } from "reactstrap";
-import * as clipboard from 'clipboard';
 
 // Store
 import { Store } from "../Store";
@@ -11,37 +10,29 @@ interface IProps {
 }
 
 export class CopyPreview extends Component<IProps, {}> {
+  toClipboard: string = '';
+
   constructor(props: IProps) {
     super(props);
+    
   }
 
   copyToClipboard = (e: any) => {
-    let toClipboard: string;
 
+    // I need to find a better way of doing this I guess
     if (this.props.store.check === 'blogPost') {
-      toClipboard = `---
-      title: ${this.props.store.title}
-      author: ${this.props.store.author}
-      layout: ${this.props.store.typeOfPageLayout}
-      date: ${this.props.store.date}
-      tags: ${this.props.store.tags}
-      category: ${this.props.store.category}
-      ---`;
+      this.toClipboard = `---\ntitle: ${this.props.store.title}\nauthor: ${this.props.store.author}\nlayout: ${this.props.store.typeOfPageLayout}\ndate: ${this.props.store.date}\ntags: ${this.props.store.tags}\ncategory: ${this.props.store.category}\n---`;
     } else if (this.props.store.check === 'eventPost') {
-      toClipboard = `---
-      title: ${this.props.store.title}
-      author: ${this.props.store.author}
-      layout: ${this.props.store.typeOfPageLayout}
-      start_date: ${this.props.store.eventStartDate}
-      end_date: ${this.props.store.eventEndDate}
-      ---`;
+      this.toClipboard = `---\ntitle: ${this.props.store.title}\nauthor: ${this.props.store.author}\nlayout: ${this.props.store.typeOfPageLayout}\nstart_date: ${this.props.store.eventStartDate}\nend_date: ${this.props.store.eventEndDate}\n---`;
     }
+
+    console.log(this.toClipboard);
   }
 
   render() {
     return (
       <div>
-        <Button color="primary">Копирај</Button>{" "}
+        <Button onClick={this.copyToClipboard} color="primary">Копирај</Button>{" "}
       </div>
     );
   }

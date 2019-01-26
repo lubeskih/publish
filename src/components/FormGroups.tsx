@@ -55,7 +55,7 @@ export class FormGroups extends Component<IProps, IState> {
       this.props.store.check = "blogPost";
       this.props.store.date = new Date().toISOString().split(".")[0] + "Z";
       this.props.store.typeOfPageLayout = "blog_post";
-    } else if ((this.props.store.check = "eventPost")) {
+    } else if (changeEvent.target.value === "eventPost") {
       this.props.store.check = "eventPost";
       this.props.store.typeOfPageLayout = "event_post";
     }
