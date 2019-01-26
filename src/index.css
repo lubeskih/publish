@@ -8,3 +8,36 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Layout style */
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+h3 {
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.label-text {
+  color: rgb(90, 185, 154);
+}
+
+/* Preview component style */
+.preview p {
+  margin-bottom: 0;
+  font-family: "Ubuntu Mono";
+  color: grey;
+  font-size: 16px;
+}
+
+.preview {
+  background-color: #f2f2f2;
+  border-radius: 7px;
+  padding: 1rem;
+}
+
+.preview-col button {
+  width: 100%;
+  margin-top: 1rem;
+}
