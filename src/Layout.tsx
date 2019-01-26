@@ -10,6 +10,7 @@ import logo from './logo.svg';
 import { Preview } from './components/Preview';
 import { FormGroups } from './components/FormGroups';
 import { CopyPreview } from './components/CopyPreview';
+import { CopyAlert } from './components/CopyAlert';
 
 // Store
 import { Store } from './Store'
@@ -25,12 +26,13 @@ class Layout extends Component<{}, {}> {
         </div>
         <hr />
         <div className="row">
-          <div className="col-7 mt-3">
+          <div className="col-md-7 mt-3">
             <FormGroups store={store} />
           </div>
-          <div className="col-5 mt-3 preview-col">
+          <div className="col-md-5 mt-3 preview-col">
             <Preview store={store} />
             <CopyPreview store={store} />
+            <CopyAlert store={store} />
 
             <div className="infoPanel">
               <hr />

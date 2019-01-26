@@ -132,6 +132,8 @@ export class FormGroups extends Component<IProps, IState> {
           />
         </FormGroup>
 
+        {/* blogPost | eventPost | null */}
+
         {store.check === "blogPost" ? (
           <div>
             <FormGroup>
@@ -159,7 +161,7 @@ export class FormGroups extends Component<IProps, IState> {
               />
             </FormGroup>
           </div>
-        ) : (
+        ) : store.check === "eventPost" ? (
           <div className="row">
             <div className="col-6">
               <FormGroup>
@@ -190,7 +192,7 @@ export class FormGroups extends Component<IProps, IState> {
               </FormGroup>
             </div>
           </div>
-        )}
+        ) : null }
       </Form>
     );
   }
