@@ -1,6 +1,5 @@
 // Libraries
 import React, { Component } from 'react';
-import { observer } from 'mobx-react';
 
 // Style
 import 'bootstrap/dist/css/bootstrap.css';

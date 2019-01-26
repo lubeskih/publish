@@ -1,9 +1,11 @@
+// Libraries
 import { observable } from 'mobx';
 
-
+// Types
 type PageLayout = 'blog_post' | 'event_post';
 type rButton = 'blogPost' | 'eventPost' | null;
 
+// Store
 export class Store {
     // Radio button; blogPost -> blog post; eventPost -> event post
     @observable check: rButton = null;
@@ -14,13 +16,13 @@ export class Store {
     @observable typeOfPageLayout: PageLayout = 'blog_post';
 
     // For blog posts
-    @observable date: string = ''; // !!! Date is stored in UTC !!! TO BE CHANGED TO CEST !!!
+    @observable date: string = '';
     @observable tags: string = '';
     @observable category: string = '';
 
     // For events
-    @observable eventStartDate: string = ''; // !!! Date is stored in UTC !!! TO BE CHANGED TO CEST !!!
-    @observable eventEndDate: string = ''; // !!! Date is stored in UTC !!! TO BE CHANGED TO CEST !!!
+    @observable eventStartDate: string = '';
+    @observable eventEndDate: string = '';
 
     // For Alert after copy
     @observable visible: boolean = false;

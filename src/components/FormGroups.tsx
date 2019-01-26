@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import DatePicker from "react-datepicker";
 import { observer } from "mobx-react";
 import { Form, FormGroup, Label, Input } from "reactstrap";
+import moment from 'moment';
 
 // Style
 import "react-datepicker/dist/react-datepicker.css";
@@ -32,7 +33,8 @@ export class FormGroups extends Component<IProps, IState> {
 
   handleStartDateChange = (date: Date) => {
     // Update store with string date
-    this.props.store.eventStartDate = date.toISOString().split(".")[0] + "Z";
+    // Date comes in UTC, adding 1 hour to convert to CEST
+    this.props.store.eventStartDate = moment(date).add(1, 'hour').toISOString().split(".")[0] + "Z";
 
     // Update local state to Date
     this.setState({
@@ -42,7 +44,8 @@ export class FormGroups extends Component<IProps, IState> {
 
   handleEndDateChange = (date: Date) => {
     // Update store with string date
-    this.props.store.eventEndDate = date.toISOString().split(".")[0] + "Z";
+    // Date comes in UTC, adding 1 hour to convert to CEST
+    this.props.store.eventEndDate = moment(date).add(1, 'hour').toISOString().split(".")[0] + "Z";
 
     // Update local state to Date
     this.setState({
@@ -53,7 +56,8 @@ export class FormGroups extends Component<IProps, IState> {
   handleOptionChange = (changeEvent: any) => {
     if (changeEvent.target.value === "blogPost") {
       this.props.store.check = "blogPost";
-      this.props.store.date = new Date().toISOString().split(".")[0] + "Z";
+      // Date comes in UTC, adding 1 hour to convert to CEST
+      this.props.store.date = moment(new Date()).add(1, 'hour').toISOString().split(".")[0] + "Z";
       this.props.store.typeOfPageLayout = "blog_post";
     } else if (changeEvent.target.value === "eventPost") {
       this.props.store.check = "eventPost";
