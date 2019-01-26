@@ -30,11 +30,11 @@ class Layout extends Component<{}, {}> {
           </div>
           <div className="col-5 mt-3 preview-col">
             <Preview store={store} />
-            <CopyPreview />
+            <CopyPreview store={store} />
 
             <div className="infoPanel">
               <hr />
-              <p>Built with ♥ for the <a href="http://blog.spodeli.org">#skopjehacklab</a> by <a href="https://lh.mk">lh.mk</a></p>
+              <p>За <a href="http://blog.spodeli.org">#хаклаб</a>, <a href="">напишано</a> со &#10084;  од <a href="https://lh.mk">lh.mk</a>.</p>
             </div>
           </div>
         </div>
