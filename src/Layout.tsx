@@ -13,17 +13,9 @@ import { CopyPreview } from './components/CopyPreview';
 
 // Store
 import { Store } from './Store'
+const store = new Store();
 
-interface IProps {
-  store: Store,
-}
-
-@observer
-class Layout extends Component<IProps, {}> {
-  constructor (props: IProps) {
-    super(props);
-  }
-
+class Layout extends Component<{}, {}> {
   render() {
     return (
       <div className="container">
@@ -34,10 +26,10 @@ class Layout extends Component<IProps, {}> {
         <hr />
         <div className="row">
           <div className="col-7 mt-3">
-            <FormGroups />
+            <FormGroups store={store} />
           </div>
           <div className="col-5 mt-3 preview-col">
-            <Preview />
+            <Preview store={store} />
             <CopyPreview />
 
             <div className="infoPanel">
