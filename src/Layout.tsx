@@ -35,7 +35,7 @@ class Layout extends Component<{}, {}> {
 
             <div className="infoPanel">
               <hr />
-              <p>За <a href="http://blog.spodeli.org">#хаклаб</a>, <a href="">напишано</a> со &#10084;  од <a href="https://lh.mk">lh.mk</a>.</p>
+              <p>За <a href="http://blog.spodeli.org">#хаклаб</a>, напишано со &#10084;  од <a href="https://lh.mk">lh.mk</a>.</p>
             </div>
           </div>
         </div>
