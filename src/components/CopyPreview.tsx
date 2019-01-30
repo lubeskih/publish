@@ -44,8 +44,8 @@ export class CopyPreview extends Component<IProps, {}> {
 
     return this.toClipboard;
   };
-
-  render() {
+  
+  componentDidMount() {
     let cb = new ClipboardJS(".btn", {
       text: this.copyToClipboard
     });
@@ -57,7 +57,9 @@ export class CopyPreview extends Component<IProps, {}> {
         this.props.store.visible = false;
       }, 3000);
     });
+  }
 
+  render() {
     return (
       <div>
         <Button className="btn" color="primary">
