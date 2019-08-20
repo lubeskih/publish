@@ -1,9 +1,6 @@
 ## Publish
 
-Publish is a tool written in React (with Mobx) for easier creation of YAML front matter blocks for events and blog posts.
-
-Originally, I wrote this tool for a jekyll site where events and blog posts were published in Markdown files.
-
+Publish is a tool written for easier creation of YAML front matter blocks. Originally, I wrote this tool for a jekyll site where events and blog posts were published in Markdown files.
 
 #### Contributing
 
