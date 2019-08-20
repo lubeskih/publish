@@ -21,7 +21,7 @@ export class CopyAlert extends React.Component<IProps, {}> {
     return (
       <div className="mt-3">
         <Alert color="primary" isOpen={this.props.store.visible} fade={true}>
-          Успешно копирано!
+          Copied to clipboard!
         </Alert>
       </div>
     );

@@ -84,7 +84,7 @@ export class FormGroups extends Component<IProps, IState> {
     return (
       <Form>
         <FormGroup tag="fieldset">
-          <Label className="label-text">Сакам да објавам: </Label>
+          <Label className="label-text">I would like to publish: </Label>
           <FormGroup check>
             <Label>
               <Input
@@ -94,7 +94,7 @@ export class FormGroups extends Component<IProps, IState> {
                 type="radio"
                 name="radio2"
               />{" "}
-              Настан
+              Event
             </Label>
           </FormGroup>
           <FormGroup check>
@@ -106,43 +106,41 @@ export class FormGroups extends Component<IProps, IState> {
                 type="radio"
                 name="radio1"
               />{" "}
-              Блог пост
+              Blog post
             </Label>
           </FormGroup>
         </FormGroup>
 
         <FormGroup>
           <Label className="label-text" for="exampleTitle">
-            Наслов
+            Title
           </Label>
           <Input
             onChange={this.handleInputChange}
             type="text"
             name="title"
             id="titleField"
-            placeholder="Учиме да лемиме!"
+            placeholder="We're learning to solder!"
           />
         </FormGroup>
         <FormGroup>
           <Label className="label-text" for="exampleAuthor">
-            Објавил
+            Published by:
           </Label>
           <Input
             onChange={this.handleInputChange}
             type="text"
             name="author"
             id="authorField"
-            placeholder="Некојси"
+            placeholder="John Doe"
           />
         </FormGroup>
-
-        {/* blogPost | eventPost | null */}
 
         {store.check === "blogPost" ? (
           <div>
             <FormGroup>
               <Label className="label-text" for="exampleTags">
-                Лепенки
+                Labels
               </Label>
               <Input
                 onChange={this.handleInputChange}
@@ -154,7 +152,7 @@ export class FormGroups extends Component<IProps, IState> {
             </FormGroup>
             <FormGroup>
               <Label className="label-text" for="exampleCategory">
-                Категорија
+                Category
               </Label>
               <Input
                 onChange={this.handleInputChange}
@@ -169,7 +167,7 @@ export class FormGroups extends Component<IProps, IState> {
           <div className="row">
             <div className="col-6">
               <FormGroup>
-                <Label className="label-text">Почеток на настанот: </Label>
+                <Label className="label-text">The event starts at: </Label>
                 <DatePicker
                   selected={this.state.eventStartDateLocalState}
                   onChange={this.handleStartDateChange}
@@ -183,7 +181,7 @@ export class FormGroups extends Component<IProps, IState> {
             </div>
             <div className="col-6">
               <FormGroup>
-                <Label className="label-text">Крај на настанот:</Label>
+                <Label className="label-text">The event ends at:</Label>
                 <DatePicker
                   selected={this.state.eventEndDateLocalState}
                   onChange={this.handleEndDateChange}

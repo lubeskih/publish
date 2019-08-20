@@ -21,7 +21,7 @@ class Layout extends Component<{}, {}> {
       <div className="container">
         <div>
           <img src={logo} className="logo" alt="logo" />
-          <h3 className="mt-5">алатката</h3>
+          <h3 className="mt-5">publish</h3>
         </div>
         <hr />
         <div className="row">
@@ -33,9 +33,9 @@ class Layout extends Component<{}, {}> {
             <CopyPreview store={store} />
             <CopyAlert store={store} />
 
-            <div className="infoPanel">
+            <div style={{ textAlign: "center" }} className="infoPanel">
               <hr />
-              <p>За <a href="http://blog.spodeli.org">#хаклаб</a>, напишано со &#10084;  од <a href="https://lh.mk">lh.mk</a>.</p>
+              <a style={{ textAlign: "center", backgroundColor: "#2b303b", padding: "1px 5px 1px 5px", color: "white", fontFamily: "Monospace" }} href="https://lh.mk">lh.mk</a> | <a href="https://github.com/lubeskih/publish">REPOSITORY</a>
             </div>
           </div>
         </div>

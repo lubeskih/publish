@@ -63,7 +63,7 @@ export class CopyPreview extends Component<IProps, {}> {
     return (
       <div>
         <Button className="btn" color="primary">
-          Копирај
+          Copy
         </Button>
       </div>
     );
