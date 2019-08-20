@@ -1,6 +1,6 @@
 {
-  "homepage": "http://skopjehacklab.github.io/alatkata",
-  "name": "alatkata",
+  "homepage": "https://lubeskih.github.io/publish",
+  "name": "publish",
   "version": "0.1.0",
   "dependencies": {
     "bootstrap": "^4.3.1",
